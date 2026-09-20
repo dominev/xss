@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pocket Crawl Lint Soup α0.1 (CAO WebTiles)</title>
+  <link rel="stylesheet" href="/static/css/cao.css" />
+  <link rel="stylesheet" href="/static/css/game.css" />
+</head>
+<body>	pcls - α0.1
+  <section id="cao">
+    <header class="cao-head">
+      <div class="welcome">Добро пожаловать в <b>Pocket Crawl Lint Soup α0.1</b> (CAO WebTiles)!</div>
+      <form id="auth" autocomplete="off">
+        <label>Логин: <input id="user" name="user" /></label>
+        <label>Пароль: <input id="pass" name="pass" type="password" /></label>
+        <button type="submit" id="login">Войти</button>
+        <span class="pipe">|</span>
+        <button type="button" id="register">Регистрация</button>
+      </form>
+      <div id="session" hidden>
+        Вы вошли как <b id="who"></b>
+        <span class="pipe">|</span>
+        <a href="#" id="logout">Выйти</a>
+      </div>
+    </header>
+    <p class="hello" id="hello" hidden></p>
+    <p class="err" id="auth-err" hidden></p>
+    <div id="news"></div>
+    <p class="rules">
+      <b>Rules:</b> Без харасмента, не использовать запрещенные имена, не спамить, без ботов.
+      Записи игр не хранятся бесконечно. Взаимодействовать с админом запрещено.
+      Тестовый аккаунт — по-умолчанию <b>admin / admin</b>. Мультиплеер будет добавлен позже; эта доска одображает другие яйца.
+    </p>
+    <div id="play-now" hidden>
+      <h2 class="running">Играть сейчас:</h2>
+      <div id="versions"></div>
+    </div>
+    <h2 class="running">Игры были запущены:</h2>
+    <div class="board-wrap">
+      <table class="board">
+        <thead>
+          <tr>
+            <th class="user">-User</th>
+            <th>Game</th>
+            <th>XL</th>
+            <th>Char</th>
+            <th>Place</th>
+            <th>Turn</th>
+            <th>Time</th>
+            <th>God</th>
+            <th>Idle</th>
+            <th>Specs</th>
+            <th>Milestone</th>
+          </tr>
+        </thead>
+        <tbody id="board-body"></tbody>
+      </table>
+    </div>
+    <p class="foot">· lobby · Pocket Crawl Lint Soup α0.1 · не суди и не судимым будешь</p>
+  </section>
+
+  <div id="loadscreen" hidden>
+    <div class="load-copy">Loading…</div>
+    <div class="load-title">Pocket Crawl</div>
+    <div class="load-sub">lint Soup α0.1</div>
+    <img id="load-art" alt="" />
+  </div>
+
+  <div id="shell" hidden>
+    <header id="top">
+      <div class="brand">Pocket Crawl Lint Soup α0.1 <span>α0.1 · Лобби</span></div>
+      <div id="top-right"></div>
+    </header>
+    <div id="view"></div>
+  </div>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/game.js"></script>
+  <script src="/static/js/cao.js"></script>
+</body>
+</html>

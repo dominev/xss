@@ -1,0 +1,21 @@
+[
+  {
+    "id": 4,
+    "when": "2026-09-20 15:59",
+    "user": "admin",
+    "name": "Тута",
+    "species": "zhar",
+    "title": "Жарёк",
+    "temper": "Язвительный",
+    "temper_key": "snark",
+    "xl": 1,
+    "place": "D:1",
+    "time_s": 16,
+    "kills": 0,
+    "result": "dead",
+    "killed_by": "голод",
+    "milestone": "killed by hunger",
+    "relic": "Второй шанс",
+    "relic_id": "second_chance"
+  }
+]

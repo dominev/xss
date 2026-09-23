@@ -1,0 +1,115 @@
+/* CAO lobby — proportional default face, not a terminal font */
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+  color: #d3d3d3;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+a { color: #6cf; }
+#cao { padding: 8px 12px 28px; }
+.cao-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+.welcome { color: #e8e8e8; }
+.welcome b { color: #fff; font-weight: 700; }
+#auth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ddd;
+  white-space: nowrap;
+  margin-left: auto;
+}
+#cao.in #auth { display: none !important; }
+#cao:not(.in) #session { display: none !important; }
+#auth[hidden],
+#session[hidden],
+#hello[hidden],
+#play-now[hidden],
+#auth-err[hidden] { display: none !important; }
+#auth input {
+  background: #000;
+  color: #eee;
+  border: 1px solid #888;
+  width: 110px;
+  padding: 1px 4px;
+  font: inherit;
+}
+#auth button {
+  background: #d0d0d0;
+  color: #111;
+  border: 1px solid #999;
+  font: inherit;
+  padding: 1px 10px;
+  cursor: pointer;
+}
+.pipe { color: #888; margin: 0 4px; }
+.err { color: #f66; margin: 8px 0 0; }
+.hello { color: #eee; margin: 6px 0 8px; }
+.news-line { margin: 1px 0; color: #ccc; }
+.news-line .d { color: #6cf; }
+.rules { margin: 16px 0 18px; max-width: 1080px; color: #c8c8c8; }
+.rules b { color: #eee; }
+#play-now { margin: 8px 0 20px; }
+#play-now .running {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ddd;
+  margin: 0 0 4px;
+  text-align: left;
+}
+#versions { color: #c8c8c8; }
+.ver-line { margin: 2px 0 6px; }
+.ver-line a.play { color: #6cf; text-decoration: underline; cursor: pointer; }
+.ver-line .off { color: #777; }
+.ver-line .note { color: #999; }
+.running {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ddd;
+  margin: 16px 0 8px;
+  text-align: center;
+}
+.board-wrap { overflow-x: auto; }
+table.board {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d3d3d3;
+  font-size: 16px;
+}
+table.board th {
+  text-align: left;
+  font-weight: 400;
+  color: #bbb;
+  padding: 0 18px 6px 0;
+  white-space: nowrap;
+}
+table.board td {
+  padding: 1px 18px 1px 0;
+  white-space: nowrap;
+  vertical-align: top;
+}
+table.board td.user a { color: #6cf; text-decoration: underline; }
+.foot { color: #666; margin-top: 28px; font-size: 14px; }
+#session { color: #ddd; white-space: nowrap; margin-left: auto; }
+#session a { color: #6cf; text-decoration: underline; }
+#loadscreen {
+  position: fixed; inset: 0; background: #000; z-index: 40;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+#loadscreen[hidden] { display: none !important; }
+.load-copy { color: #ddd; letter-spacing: .08em; margin-bottom: 8px; font-family: sans-serif; }
+.load-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px; color: #d4a017; letter-spacing: .06em;
+  text-shadow: 0 2px 0 #5a3a00;
+}
+.load-sub { color: #9aa; letter-spacing: .35em; text-transform: uppercase; font-size: 13px; margin: 4px 0 18px; }
+#load-art { max-width: 720px; max-height: 52vh; object-fit: contain; }
+#cao[hidden], #shell[hidden] { display: none !important; }
